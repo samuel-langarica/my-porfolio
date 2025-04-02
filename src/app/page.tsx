@@ -5,7 +5,8 @@ import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
 import { personalInfo, experiences, projects, education, skills, socialLinks, interests } from '@/data/portfolio';
 import Image from 'next/image';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaPhone, FaFileDownload } from 'react-icons/fa';
+import { FaGithub, FaEnvelope, FaPhone, FaFileDownload } from 'react-icons/fa';
+import * as FaIcons from 'react-icons/fa';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -88,7 +89,7 @@ export default function Home() {
               </div>
               <div className="flex space-x-4">
                 {socialLinks.map((link) => {
-                  const Icon = require('react-icons/fa')[link.icon];
+                  const Icon = FaIcons[link.icon as keyof typeof FaIcons];
                   return (
                     <a
                       key={link.platform}
@@ -366,7 +367,7 @@ export default function Home() {
               </div>
               <div className="flex justify-center space-x-6 mt-8">
                 {socialLinks.map((link) => {
-                  const Icon = require('react-icons/fa')[link.icon];
+                  const Icon = FaIcons[link.icon as keyof typeof FaIcons];
                   return (
                     <a
                       key={link.platform}
