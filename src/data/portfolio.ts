@@ -116,11 +116,13 @@ export const projects: Project[] = [
     title: "Weather Chatbot Pydantic AI",
     description: "Developed a chatbot using Pydantic AI to provide weather information and forecasts using an open weather API.",
     technologies: ["Python", "Pydantic AI"],
+    githubUrl: "https://github.com/samuel-langarica/weather-chatbot-pydantic-ai",
   },
   {
     title: "Research Notifier Agent",
     description: "Web application to schedule web scraping reports over certain topic or websites",
     technologies: ["Python", "Pydantic AI"],
+    githubUrl: "https://github.com/samuel-langarica/autonomous-research-notifier-agent",
   },
 ];
 
