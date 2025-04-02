@@ -45,10 +45,10 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen bg-white">
       {/* Desktop Navigation */}
-      <nav className="fixed left-0 top-0 h-full w-64 bg-white shadow-lg hidden lg:block z-50">
+      <nav className="fixed left-0 top-0 h-full w-64 bg-[#ECF0F1] shadow-lg hidden lg:block z-50">
         <div className="p-6">
           <div className="mb-8">
-            <h1 className="text-2xl font-bold text-blue-600">Portfolio</h1>
+            <h1 className="text-2xl font-bold text-[#2C3E50]">Portfolio</h1>
           </div>
           <ul className="space-y-4">
             {navItems.map((item) => (
@@ -57,8 +57,8 @@ export default function Layout({ children }: LayoutProps) {
                   href={`#${item.id}`}
                   className={`block px-4 py-2 rounded-lg transition-colors ${
                     activeSection === item.id
-                      ? 'bg-blue-50 text-blue-600'
-                      : 'text-slate-600 hover:bg-blue-50 hover:text-blue-600'
+                      ? 'bg-[#F4D03F] text-[#2C3E50]'
+                      : 'text-[#95A5A6] hover:bg-[#F4D03F] hover:text-[#2C3E50]'
                   }`}
                 >
                   {item.label}
@@ -70,18 +70,18 @@ export default function Layout({ children }: LayoutProps) {
       </nav>
 
       {/* Mobile Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-white shadow-lg z-50 lg:hidden">
+      <nav className="fixed top-0 left-0 right-0 bg-[#ECF0F1] shadow-lg z-50 lg:hidden">
         <div className="px-4 py-3 flex justify-between items-center">
-          <h1 className="text-xl font-bold text-blue-600">Portfolio</h1>
+          <h1 className="text-xl font-bold text-[#2C3E50]">Portfolio</h1>
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-slate-600 hover:text-blue-600"
+            className="text-[#95A5A6] hover:text-[#F4D03F]"
           >
             {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
         {isMobileMenuOpen && (
-          <div className="px-4 py-2 bg-white border-t">
+          <div className="px-4 py-2 bg-[#ECF0F1] border-t border-[#95A5A6]">
             <ul className="space-y-2">
               {navItems.map((item) => (
                 <li key={item.id}>
@@ -89,8 +89,8 @@ export default function Layout({ children }: LayoutProps) {
                     href={`#${item.id}`}
                     className={`block px-4 py-2 rounded-lg transition-colors ${
                       activeSection === item.id
-                        ? 'bg-blue-50 text-blue-600'
-                        : 'text-slate-600 hover:bg-blue-50 hover:text-blue-600'
+                        ? 'bg-[#F4D03F] text-[#2C3E50]'
+                        : 'text-[#95A5A6] hover:bg-[#F4D03F] hover:text-[#2C3E50]'
                     }`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -104,7 +104,7 @@ export default function Layout({ children }: LayoutProps) {
       </nav>
 
       {/* Main Content */}
-      <main className="lg:ml-64 pt-16 lg:pt-0">
+      <main className="lg:ml-64">
         {children}
       </main>
     </div>
