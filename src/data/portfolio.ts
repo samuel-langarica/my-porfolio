@@ -99,7 +99,29 @@ export const projects: Project[] = [
     // liveUrl: "https://project-demo.com",
     // imageUrl: "/images/project1.jpg" 
   },
-  // Add more projects as needed
+  {
+    title: "Java Raytracer",
+    description: "Built from scratch achieving realistic rendering of 3D scenes",
+    technologies: ["Java"],
+    // githubUrl: "https://github.com/yourusername/project",
+    // liveUrl: "https://project-demo.com",
+    // imageUrl: "/images/project1.jpg" 
+  },
+  {
+    title: "VR Tire Change Simulator",
+    description: "Interactive simulator to guide users through the step-by-step process of changing a flat tire. Developed with Unity.",
+    technologies: ["Unity", "C#"],
+  },
+  {
+    title: "Weather Chatbot Pydantic AI",
+    description: "Developed a chatbot using Pydantic AI to provide weather information and forecasts using an open weather API.",
+    technologies: ["Python", "Pydantic AI"],
+  },
+  {
+    title: "Research Notifier Agent",
+    description: "Web application to schedule web scraping reports over certain topic or websites",
+    technologies: ["Python", "Pydantic AI"],
+  },
 ];
 
 export const education: Education[] = [
